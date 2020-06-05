@@ -31,12 +31,11 @@ const getCities = (event) => {
     .then(res => res.json())
     .then(cities => {
       for(const city of cities) {
-        citySelect.innerHTML += `<option value="${city.nome}">${city.nome}</option>`
+        citySelect.innerHTML += `<option value="${city.nome}">${city.nome}</option>`;
       }
       citySelect.disabled = false;
     })
-
-}
+};
 
 document
   .querySelector("select[name=uf]")
@@ -49,7 +48,7 @@ const collectedItems = document.querySelector('input[name=items');
 
 let selectedItems = [];
 
-const handleSelectedItem = (event) => {    
+const handleSelectedItem = (event) => {
   const itemLi = event.target;
    // adicionar ou remover classes
 
